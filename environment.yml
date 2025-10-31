@@ -1,0 +1,27 @@
+name: intersectorenv
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # --- Core Python Environment ---
+  - python=3.11
+
+  # --- CAD / Geometry libraries ---
+  - occt                 # OpenCascade via conda-forge
+  - pip
+
+  # --- Developer Tools (Conda-level) ---
+  - poetry               # Manage Python dependencies and packaging
+
+  # --- Optional System Utilities ---
+  - git
+
+  # --- pip-level packages managed by Poetry ---
+  - pip:
+      # You can list lightweight extras if needed before running poetry install
+      - flake8
+      - black
+      - pytest
+      - click
+      - rich

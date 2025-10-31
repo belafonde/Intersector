@@ -1,0 +1,1 @@
+"""Command-line interface for simple OpenCascade CAD operations."""
