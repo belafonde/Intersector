@@ -1,0 +1,12 @@
+"""intersector package.
+
+A command-line CAD tool built on OpenCascade, providing utilities for
+creating, inspecting, and exporting 3D geometric models.
+
+This package follows:
+- PEP 257 (docstring conventions)
+- PEP 420 (namespace compatibility)
+- PEP 440 (versioning)
+"""
+
+__version__ = "0.1.0"

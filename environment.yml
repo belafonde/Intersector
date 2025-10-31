@@ -6,22 +6,13 @@ channels:
 dependencies:
   # --- Core Python Environment ---
   - python=3.11
+  - pip
 
   # --- CAD / Geometry libraries ---
   - occt                 # OpenCascade via conda-forge
-  - pip
+  - pythonocc-core=7.7.0
+  - pyqt
 
   # --- Developer Tools (Conda-level) ---
   - poetry               # Manage Python dependencies and packaging
-
-  # --- Optional System Utilities ---
   - git
-
-  # --- pip-level packages managed by Poetry ---
-  - pip:
-      # You can list lightweight extras if needed before running poetry install
-      - flake8
-      - black
-      - pytest
-      - click
-      - rich

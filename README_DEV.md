@@ -16,16 +16,32 @@ Built with **Python 3.11**, **Poetry**, and **Conda**, following modern Python p
 ---
 
 ## 🧩 Project Structure
-```
-intersector/
-      ├── pyproject.toml              # Poetry project configuration (dependencies, tools)
-      ├── environment.yml             # Conda environment definition
-      ├── README_DEV.md               # Developer documentation
-      ├── README.md                   # End-user documentation
-      └── src/
-           └── intersector/
-                    ├── __init__.py
-                    └── cli.py        # CLI entry points (e.g., "task1 intersect")
+```   
+intersector/   
+    ├── pyproject.toml                     # Poetry project configuration (dependencies, tools)
+    ├── environment.yml                    # Conda environment definition
+    ├── README_DEV.md                      # Developer documentation
+    ├── README.md                          # End-user documentation
+    ├── src/   
+    │   └── intersector/   
+    │           ├── __init__.py   
+    │           ├── cli.py                 # CLI entry points (e.g., "intersector intersect")
+    │           ├── operations/            # Core computational modules
+    │           │   ├── __init__.py   
+    │           │   ├── intersect.py       # Intersection logic implementation
+    │           │   ├── check.py           # Intersection validation helpers
+    │           ├── utils/                 # Supporting utilities
+    │           │   ├── __init__.py   
+    │           │   ├── parsing.py         # Input parsing (plane, arguments)
+    │           │   ├── visualize.py       # Visualization helpers
+    │           │   ├── logging.py         # Logging setup and configuration
+    │           └── tests/                 # Unit tests
+    │               ├── __init__.py
+    │               ├── test_intersect.py
+    │               ├── test_visualize.py
+    │               ├── test_check.py
+    │               └── test_parsing.py
+    └── step_files/                        # Sample STEP files for testing
 ```
 ---
 ## 🧰 Prerequisites
@@ -62,3 +78,101 @@ poetry config virtualenvs.create false
 ```bash
 poetry install
 ```
+## ▶️ Usage
+
+### Run the CLI application with:
+```bash
+poetry run intersector --help
+```
+
+### Example command:
+```bash
+poetry run intersector intersect --in-step <STEP_FILE> --in-plane <POINT:VECTOR>
+```
+### Example:
+```bash
+ poetry run intersector intersect --in-step ./step_files/sample.stp --in-plane 0,0,50:0,0,1
+```
+This command will:
+- Load the STEP file sample.stp
+- Define a plane passing through the point (0, 0, 50) with normal vector (0, 0, 1)
+- Compute the intersection between the plane and the shape
+- Display the shape, and the intersection curve in a 3D viewer window
+
+## 🧩 Plane Syntax
+
+Planes are given using the format:
+```bash
+X,Y,Z:NX,NY,NZ
+```
+where:
+
+- (X, Y, Z) → a point on the plane
+- (NX, NY, NZ) → the normal direction of the plane
+
+## ✅ Example:
+```bash
+0,0,100:0,0,1
+```
+This defines a plane parallel to the XY plane at Z = 100.
+
+## 🧪 Development Workflow
+
+### Format code automatically
+```bash
+poetry run black src/
+```
+
+### Run code style and docstring checks
+```bash
+poetry run ruff check .
+```
+
+### Run tests
+```bash
+poetry run pytest
+```
+
+## 🧰 Dependency Management
+
+### Add a new dependency
+```bash
+poetry add somepackage
+```
+
+### Add a development-only dependency
+```bash
+poetry add --group dev black flake8 pytest
+```
+
+### Update dependencies
+```bash
+poetry update
+```
+
+## 📦 Packaging and Distribution
+
+### Build the package:
+```bash
+poetry build
+```
+
+## 🧠 Standards and Conventions
+
+| PEP                                              | Description                  |
+| ------------------------------------------------ | ---------------------------- |
+| [PEP 257](https://peps.python.org/pep-0257/)     | Docstring conventions        |
+| [PEP 420](https://peps.python.org/pep-0420/)     | Namespace package support    |
+| [PEP 440](https://peps.python.org/pep-0440/)     | Versioning scheme            |
+| [PEP 517/518](https://peps.python.org/pep-0517/) | Build system interface       |
+| [PEP 621](https://peps.python.org/pep-0621/)     | Metadata in `pyproject.toml` |
+
+## 🪪 License
+MIT License © 2025 Yannis Arapakis
+
+## 🙌 Acknowledgements
+- OpenCascade
+- Click
+- Rich
+- Poetry
+- Conda-Forge
