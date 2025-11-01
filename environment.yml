@@ -9,7 +9,6 @@ dependencies:
   - pip
 
   # --- CAD / Geometry libraries ---
-  - occt                 # OpenCascade via conda-forge
   - pythonocc-core=7.7.0
   - pyqt
 

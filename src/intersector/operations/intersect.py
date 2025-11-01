@@ -1,3 +1,5 @@
+# Copyright (c) 2025 Yannis Arapakis
+# Licensed under the MIT License. See LICENSE file for details.
 """Intersection operations between shapes and planes.
 
 Provides functionality to compute intersections using OpenCascade.

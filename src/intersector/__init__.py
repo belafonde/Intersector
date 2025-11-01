@@ -1,3 +1,5 @@
+# Copyright (c) 2025 Yannis Arapakis
+# Licensed under the MIT License. See LICENSE file for details.
 """intersector package.
 
 A command-line CAD tool built on OpenCascade, providing utilities for

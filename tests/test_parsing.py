@@ -1,3 +1,5 @@
+# Copyright (c) 2025 Yannis Arapakis
+# Licensed under the MIT License. See LICENSE file for details.
 """Unit tests for parse_plane_input in parsing.py."""
 
 import pytest

@@ -1,3 +1,5 @@
+# Copyright (c) 2025 Yannis Arapakis
+# Licensed under the MIT License. See LICENSE file for details.
 """Unit tests for the visualization utilities using pythonocc.
 
 This test suite verifies the behavior of `show_shape` and `show_shapes`

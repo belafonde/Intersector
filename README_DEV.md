@@ -32,11 +32,13 @@ intersector/
     │           │   ├── check.py           # Intersection validation helpers
     │           ├── utils/                 # Supporting utilities
     │           │   ├── __init__.py   
+    │           │   ├── file_handler.py    # File handling   
     │           │   ├── parsing.py         # Input parsing (plane, arguments)
     │           │   ├── visualize.py       # Visualization helpers
-    │           │   ├── logging.py         # Logging setup and configuration
+    │           │   └── logging.py         # Logging setup and configuration
     │           └── tests/                 # Unit tests
-    │               ├── __init__.py
+    │               ├── test_cli.py
+    │               ├── test_file_handler.py
     │               ├── test_intersect.py
     │               ├── test_visualize.py
     │               ├── test_check.py
@@ -168,7 +170,8 @@ poetry build
 | [PEP 621](https://peps.python.org/pep-0621/)     | Metadata in `pyproject.toml` |
 
 ## 🪪 License
-MIT License © 2025 Yannis Arapakis
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.  
+Third-party components and their licenses are listed in [NOTICE.txt](NOTICE.txt).
 
 ## 🙌 Acknowledgements
 - OpenCascade
