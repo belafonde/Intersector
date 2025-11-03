@@ -10,5 +10,3 @@ This package follows:
 - PEP 420 (namespace compatibility)
 - PEP 440 (versioning)
 """
-
-__version__ = "0.1.0"
