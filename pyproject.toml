@@ -1,0 +1,47 @@
+[build-system]
+requires = ["poetry-core>=1.7.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "intersector"
+version = "1.0.0"
+description = "A CLI CAD application using OpenCascade"
+authors = ["Yannis Arapakis"]
+readme = "README.md"
+packages = [{ include = "intersector", from = "src" }]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+rich = "^13.9.0"
+
+[tool.poetry.group.dev.dependencies]
+flake8-docstrings = "^1.7.0"
+black = "^24.10.0"
+ruff = "^0.14.3"
+flake8 = "^7.3.0"
+pytest = "^8.4.2"
+
+[tool.poetry.scripts]
+intersector = "intersector.cli:intersector"
+
+[tool.ruff]
+# Match your preferred line length
+line-length = 88
+
+# Target Python version
+target-version = "py311"
+
+# Enable auto-fixable checks (optional)
+fix = true
+
+[tool.ruff.lint]
+# Rules to check (E, F, W come from pycodestyle/pyflakes, B from flake8-bugbear, I from isort, PL from pylint)
+select = ["E", "F", "W", "B", "I", "PL", "BLE", "D", "DOC"]
+ignore = [
+    "D213",  # Ignore multi-line docstring summary line should start at the first line
+    "D203",  # Ignore 1 blank line required before class docstring
+]
+preview = true
+

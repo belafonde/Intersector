@@ -1,0 +1,17 @@
+name: intersectorenv
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # --- Core Python Environment ---
+  - python=3.11
+  - pip
+
+  # --- CAD / Geometry libraries ---
+  - pythonocc-core=7.7.0
+  - pyqt
+
+  # --- Developer Tools (Conda-level) ---
+  - poetry               # Manage Python dependencies and packaging
+  - git

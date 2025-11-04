@@ -1,0 +1,66 @@
+Intersector — 3D Geometry Intersection & Visualization Tool
+Copyright (c) 2025 Yannis Arapakis
+
+This software is distributed under the MIT License.
+See the LICENSE file in this repository for details.
+
+---
+
+THIRD-PARTY LICENSE NOTICES
+===========================
+
+This project uses several open-source libraries. Their respective licenses and
+acknowledgments are listed below.
+
+1. pythonocc-core  
+   License: GNU Lesser General Public License v3.0 (LGPL-3.0-or-later)  
+   Source: https://github.com/tpaviot/pythonocc-core  
+   Description: Python bindings for the OpenCASCADE geometry and topology modeling library.
+
+2. OpenCASCADE Technology (OCC)  
+   License: LGPL-2.1 (with exceptions)  
+   Source: https://dev.opencascade.org  
+   Description: CAD kernel for 3D surface and solid modeling, visualization, and data exchange.
+
+3. PyQt5  
+   License: GNU General Public License v3.0 (GPL-3.0) or Commercial License  
+   Source: https://riverbankcomputing.com/software/pyqt/  
+   Description: Python bindings for the Qt cross-platform GUI framework.  
+   NOTE: If you distribute this software without a PyQt5 commercial license,
+         your project must comply with GPL terms (source must be open).
+         Alternatively, consider using PySide2 (LGPL) for more flexible licensing.
+
+4. Click  
+   License: MIT License  
+   Source: https://github.com/pallets/click  
+   Description: Command-line interface creation toolkit.
+
+5. Rich  
+   License: MIT License  
+   Source: https://github.com/Textualize/rich  
+   Description: Python library for rich text and beautiful formatting in the terminal.
+
+6. pytest  
+   License: MIT License  
+   Source: https://github.com/pytest-dev/pytest  
+   Description: Testing framework for Python.
+
+7. python-dotenv  
+   License: BSD-3-Clause  
+   Source: https://github.com/theskumar/python-dotenv  
+   Description: Loads environment variables from .env files.
+
+8. numpy  
+   License: BSD-3-Clause  
+   Source: https://numpy.org/  
+   Description: Numerical computation library for Python.
+
+---
+
+DISCLAIMER
+==========
+
+This software is provided "as-is" without any warranties or guarantees.
+Each third-party dependency is the property of its respective authors and
+licensed under their own terms as listed above.
+
